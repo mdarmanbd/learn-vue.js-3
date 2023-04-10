@@ -11,6 +11,9 @@
         <p>i am a conditiona</p>
         <p>this is my fourth class</p>
     </div>
+
+    <h2 v-show="showCondition">when the condition is false is hidden</h2>
+    <h2 v-if="showCondition">besic defference the inspect elements.when the condition is false ,it's ignor the line.</h2>
 </template>
 
 <script>
@@ -19,6 +22,7 @@ export default {
         return {
            number : 'ko',
            condition : true,
+           showCondition : true,
         }
     },
 }
