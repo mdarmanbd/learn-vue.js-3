@@ -1,14 +1,12 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import conditionalRendering from './components/conditional-rendering.vue';
+import listRendaring from './components/list-rendaring.vue';
 
 </script>
 
 <template>
   <header>
   
-   <conditional-rendering></conditional-rendering>
+   <list-rendaring></list-rendaring>
   </header>
 
 </template>
