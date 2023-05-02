@@ -1,16 +1,21 @@
 
 <script >
-export default {
+import { ref } from 'vue';
+export default{
     setup() {
         return{
-            name : 'abdullah',
-            count : 0,
+            name :  ref('abdullah'),
+            count : ref(0),
         }
     },
 
     methods : {
+        changeName() {
+            this.name = 'Arman';
+        },
        increment(){
          this.count += 1
+         console.log('this is one')
        },
        decrement(){
          this.count -= 1
@@ -27,10 +32,10 @@ export default {
 </script>
 
 <template>
-
     <h3>{{ name }}</h3>
     <div>
-        <button v-on:click="name = 'arman' " >change the name</button>
+        <button @click="changeName" >change the name</button>
+        <button v-on:click="name = 'fogozon'" >change the name fogo</button>
         <button v-on:mouseover=" name = 'gobro'">mouse over</button>
     </div>
     <h2>{{ count }}</h2>
@@ -40,7 +45,7 @@ export default {
     </div>
     <h2>{{ count }}</h2>
     <div>
-        <button v-on:click="increment">incriment</button>
+        <button v-on:click="increment">incriment ff</button>
         <button v-on:click="decrement">decriment</button>
     </div>
     <h2>{{ count }}</h2>
