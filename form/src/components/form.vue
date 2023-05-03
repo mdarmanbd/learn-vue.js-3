@@ -15,18 +15,21 @@
         {text: 'two', value:'B'},
         {text:'three', value:'C'}
     ]);
-
+    const age = ref("");
 </script>
 
 <template>
 <!--basic staturater-->    
    <P class="color-green text-bold"> 1.basic staturater :-</P>
    <p>this is message: {{ message }}</p>
-   <input class="padding-10 color-green text-15" type="text" v-model="message" placeholder="eddit">
+   <input class="padding-10 color-green text-15" type="text" v-model.lazy="message" placeholder="eddit">
+<!----->
+<p> age: {{ age }}</p>
+<input type="text" v-model.number="age">   
 <!--multiline message-->
    <p class="color-green text-bold"> 2.multiline message :-</p>
    <p>this is multiline message: {{ multilineMessage }}</p>
-   <textarea class="padding-10 color-green text-15" type="text" v-model="multilineMessage" placeholder="comments"></textarea>
+   <textarea class="padding-10 color-green text-15" type="text" v-model.trim="multilineMessage" placeholder="comments"></textarea>
 <!--checkbox-->
     <p class="color-green text-bold"> 3.check box</p>
     <input type="checkbox" v-model="checkTrue">
