@@ -25,7 +25,7 @@
    <input class="padding-10 color-green text-15" type="text" v-model.lazy="message" placeholder="eddit">
 <!----->
 <p> age: {{ age }}</p>
-<input type="text" v-model.number="age">   
+<input type="text" v-model.number="age">
 <!--multiline message-->
    <p class="color-green text-bold"> 2.multiline message :-</p>
    <p>this is multiline message: {{ multilineMessage }}</p>
